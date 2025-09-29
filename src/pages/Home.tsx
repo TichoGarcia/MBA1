@@ -6,28 +6,31 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-hero text-primary-foreground">
-        <div className="absolute inset-0 bg-accent/10" />
-        <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Music className="w-8 h-8" />
-              <Sparkles className="w-6 h-6 animate-pulse-glow" />
+      <section className="relative overflow-hidden bg-gradient-hero text-foreground">
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(307_70%_46%/0.3),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,hsl(260_70%_40%/0.3),transparent_50%)]" />
+        </div>
+        <div className="container mx-auto px-4 py-24 relative z-10">
+          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <Music className="w-12 h-12 text-primary" />
+              <Sparkles className="w-8 h-8 text-secondary animate-pulse-glow" />
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-primary-glow to-secondary bg-clip-text text-transparent">
               Tu Música, Tu Momento
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
+            <p className="text-xl md:text-2xl mb-10 text-foreground/80 max-w-2xl mx-auto">
               Elige las canciones que suenan en tu bar favorito y apoya a los artistas emergentes
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
-              <div className="flex items-center gap-2 bg-primary-foreground/10 px-4 py-2 rounded-full">
-                <TrendingUp className="w-4 h-4" />
-                <span>+1,500 canciones disponibles</span>
+              <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border/50 px-5 py-3 rounded-full shadow-card">
+                <TrendingUp className="w-4 h-4 text-secondary" />
+                <span className="font-medium">+1,500 canciones disponibles</span>
               </div>
-              <div className="flex items-center gap-2 bg-primary-foreground/10 px-4 py-2 rounded-full">
-                <Music className="w-4 h-4" />
-                <span>Solo $300 CLP por canción</span>
+              <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border/50 px-5 py-3 rounded-full shadow-card">
+                <Music className="w-4 h-4 text-primary" />
+                <span className="font-medium">Solo $300 CLP por canción</span>
               </div>
             </div>
           </div>
@@ -52,46 +55,47 @@ const Home = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="bg-muted py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center">¿Cómo Funciona?</h2>
+      <section className="bg-accent/30 backdrop-blur-sm py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,hsl(307_70%_46%/0.1),transparent_70%)]" />
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="text-4xl font-bold mb-16 text-center">¿Cómo Funciona?</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center text-2xl font-bold text-primary-foreground mx-auto mb-4">
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center text-2xl font-bold text-primary-foreground mx-auto mb-6 shadow-glow group-hover:scale-110 transition-transform duration-300">
                 1
               </div>
-              <h3 className="text-xl font-semibold mb-2">Elige un Local</h3>
+              <h3 className="text-xl font-semibold mb-3">Elige un Local</h3>
               <p className="text-muted-foreground">
                 Selecciona el bar o café donde estás
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center text-2xl font-bold text-primary-foreground mx-auto mb-4">
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center text-2xl font-bold text-primary-foreground mx-auto mb-6 shadow-glow group-hover:scale-110 transition-transform duration-300">
                 2
               </div>
-              <h3 className="text-xl font-semibold mb-2">Explora el Catálogo</h3>
+              <h3 className="text-xl font-semibold mb-3">Explora el Catálogo</h3>
               <p className="text-muted-foreground">
                 Busca tu canción o artista favorito
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center text-2xl font-bold text-primary-foreground mx-auto mb-4">
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center text-2xl font-bold text-primary-foreground mx-auto mb-6 shadow-glow group-hover:scale-110 transition-transform duration-300">
                 3
               </div>
-              <h3 className="text-xl font-semibold mb-2">Paga y Agrega</h3>
+              <h3 className="text-xl font-semibold mb-3">Paga y Agrega</h3>
               <p className="text-muted-foreground">
                 Solo $300 CLP por canción
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center text-2xl font-bold text-primary-foreground mx-auto mb-4">
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center text-2xl font-bold text-primary-foreground mx-auto mb-6 shadow-glow group-hover:scale-110 transition-transform duration-300">
                 4
               </div>
-              <h3 className="text-xl font-semibold mb-2">Disfruta</h3>
+              <h3 className="text-xl font-semibold mb-3">Disfruta</h3>
               <p className="text-muted-foreground">
                 Tu canción sonará pronto y apoyas a los artistas
               </p>

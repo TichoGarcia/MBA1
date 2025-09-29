@@ -10,19 +10,19 @@ interface SongCardProps {
 
 export const SongCard = ({ song, onAddToCart }: SongCardProps) => {
   return (
-    <Card className="overflow-hidden hover:shadow-card transition-all duration-300">
+    <Card className="group overflow-hidden hover:shadow-card-hover transition-all duration-300 border-border/50 bg-gradient-card backdrop-blur-sm">
       <div className="flex gap-4 p-4">
         <div className="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
           <img
             src={song.image}
             alt={song.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
           />
-          <div className="absolute inset-0 bg-accent/20" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent" />
         </div>
         
         <div className="flex-1 min-w-0">
-          <h3 className="font-semibold text-lg truncate">{song.title}</h3>
+          <h3 className="font-semibold text-lg truncate group-hover:text-primary transition-colors">{song.title}</h3>
           <p className="text-muted-foreground text-sm mb-2">{song.artistName}</p>
           
           <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
@@ -37,11 +37,12 @@ export const SongCard = ({ song, onAddToCart }: SongCardProps) => {
           </div>
           
           <div className="flex items-center justify-between">
-            <span className="text-primary font-bold">{formatPrice(song.price)}</span>
+            <span className="text-primary font-bold text-lg">{formatPrice(song.price)}</span>
             <Button 
               variant="music" 
               size="sm"
               onClick={() => onAddToCart(song)}
+              className="shadow-glow"
             >
               Agregar a playlist
             </Button>
